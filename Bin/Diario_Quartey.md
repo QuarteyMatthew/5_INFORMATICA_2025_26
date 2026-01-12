@@ -1,6 +1,6 @@
 # **Matthew Quartey**
 
-## **UniTogether**
+## **UniTogether** 16/09/2025
     è un progetto molto utile, umano e realistico. Aiuta i giovani a trovare casa per l’università, ma anche a non sentirsi soli nel farlo. Unisce funzionalità pratiche (annunci, recensioni, filtri) con una parte sociale (esperienze, consigli di ex studenti).
 
 **Ecco una descrizione migliorata e più professionale del progetto, pronta per essere inserita in una relazione, presentazione o nella home del sito.** 
@@ -20,6 +20,20 @@ L'obiettivo è semplificare la ricerca dell’abitazione, ma anche **creare conn
 *  **Trova coinquilini compatibili**: sistema per connettersi con altri studenti in cerca di una stanza o di un compagno di appartamento nella stessa città.
 *  **Mappa interattiva**: visualizzazione geolocalizzata degli annunci e dei campus universitari, con filtri per distanza, prezzo e tipo di alloggio.
 *  **Sistema di profili verificati**: per garantire sicurezza e trasparenza, ogni utente ha un profilo con badge (studente, ex studente, proprietario, ecc.)
+## Esempio
+    User (neldiplomato): => Marco
+
+
+    Target: "trovare un appartamento in zona uni verona insieme a 3 ragazzi 
+            della sua eta e co la sua stessa passione/Corso.
+
+
+    Caratteristiche: Marco è un ragazzo vivace e allegro con una passione per 
+                     l'informatica da quando era un bimbo, ha appena finito il 
+                     percorso informatico presso l'istituto informatico 
+                     Marconi Verona e ora vuole affrontare l'avventura del 
+                     universita insieme a nuovi amici...
+
 
 ---
 
@@ -42,3 +56,6 @@ L'obiettivo è semplificare la ricerca dell’abitazione, ma anche **creare conn
 ###  **Slogan possibile:**
 
 > *"Perché l'università inizia da una buona casa — e dalle persone giuste con cui viverla."*
+
+## **Software House** : WebHow
+## **Nome Porlate** : UniTogether
