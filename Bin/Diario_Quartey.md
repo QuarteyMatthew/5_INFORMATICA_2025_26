@@ -1,3 +1,5 @@
+# 📘 Diario di Bordo – Progetto **UniTogheter**
+---
 # **Matthew Quartey**
 
 ## **UniTogether** 16/09/2025
@@ -59,3 +61,271 @@ L'obiettivo è semplificare la ricerca dell’abitazione, ma anche **creare conn
 
 ## **Software House** : WebHow
 ## **Nome Porlate** : UniTogether
+
+
+
+
+#  UniTogether – Presentazione del Progetto
+
+##  Introduzione
+Per il mio progetto **UniTogether**, ho deciso di realizzare un'applicazione web moderna utilizzando **Next.js** e **Tailwind CSS**.  
+L’obiettivo principale è creare un’interfaccia pulita, accessibile e responsive, che si adatti perfettamente sia alla versione **desktop** che **mobile**.
+
+---
+
+##  Tecnologie Utilizzate
+- **Framework:** [Next.js](https://nextjs.org/)  
+- **Libreria di stile:** [Tailwind CSS](https://tailwindcss.com/)  
+- **Linguaggio:** TypeScript / JavaScript  
+- **Versionamento:** Git + GitHub  
+
+---
+
+##  Scelta dello Stile e dei Colori
+Per l'identità visiva del progetto ho scelto una palette composta da:
+- **Cherry Red (#C21807)** → Colore principale, energico e deciso, usato per pulsanti, link e accenti.  
+- **Off White (#FAF9F6)** → Colore secondario, neutro e morbido, per sfondi e testi chiari.  
+
+Questo contrasto trasmette professionalità ma anche calore e dinamismo, in linea con la missione di **UniTogether**: unire studenti e idee.
+
+---
+
+##  Struttura del Layout
+Ho realizzato una **Navigation Bar** e un **Footer** coerenti con il tema visivo.  
+Entrambi gli elementi sono completamente **responsive** e mantengono lo stile cherry-red / off-white anche in **modalità scura**.
+
+### 🔹 Navbar
+- Gestione del **menu a tendina** per dispositivi **mobile**  
+- Correzione di errori legati alla posizione e all’allineamento degli elementi  
+- Animazioni fluide e transizioni armoniche
+
+### 🔹 Footer
+- Struttura chiara con link rapidi e informazioni utili  
+- Stile coerente con la navbar e palette colori  
+
+---
+## Funzioni aggiunte
+ - creato un effetto scerittura che accoglie gli utenti
+
+
+---
+
+##  Responsività e Modalità Dark
+Ho ottimizzato l’interfaccia per:
+- **Schermi piccoli (smartphone e tablet)** → il menu diventa a tendina con hamburger menu  
+- **Versione desktop** → layout più ampio e distribuzione bilanciata  
+- **Dark mode** → colori adattati per mantenere leggibilità e contrasto corretto  
+
+---
+
+##  Correzione Errori e Ottimizzazioni
+Durante lo sviluppo ho:
+- Risolto i bug di visualizzazione della barra di menu  
+- Sistemato le posizioni dei componenti nel layout  
+- Rifinito colori, margini e spaziature in Tailwind CSS  
+- Testato l’interfaccia su più dispositivi per garantire un’esperienza uniforme  
+
+---
+
+##  Conclusione
+Il progetto **UniTogether** rappresenta un passo importante nel mio percorso di sviluppo web:  
+un mix di design moderno, attenzione ai dettagli e funzionalità responsive, costruito con tecnologie attuali e uno stile coerente e riconoscibile.
+
+---
+
+##  Autore
+**Matthew Quartey**  
+## *24/11/2025*
+Oggi è stato il giorno della vera svolta.  
+La professoressa ci ha comunicato che dovevamo **rifare completamente il progetto web**, perché avevamo utilizzato strumenti non richiesti.  
+Per questo ho ricominciato da zero usando esclusivamente **HTML, CSS e JavaScript**.
+
+Il progetto **UniTogheter** ha come obiettivo:
+- Ricercare **atenei**
+- Mostrare **abitazioni nelle vicinanze**
+- Permettere agli studenti di trovare coinquilini
+- Usare solo codice semplice, senza framework
+
+**Stato emotivo:** sconforto iniziale, ma anche voglia di dimostrare il mio livello.
+
+---
+
+## **28/11/2025 – Struttura del Sito & Prime Pagine**
+Oggi ho definito la nuova struttura del progetto:
+
+    /index.html
+    /login.html
+    /register.html
+    /assets
+    /css
+    style.css
+    /js
+    main.js
+    auth.js
+
+
+### ✔ Home (index.html)
+- Navbar ricreata da zero  
+- Box di ricerca degli atenei  
+- Prima sezione "alloggi consigliati"  
+- Footer preliminare
+
+### ✔ Registrazione
+- Form con validazioni JS  
+- Controllo password doppio  
+- Messaggi di errore con popup CSS
+
+### ✔ Accesso
+- Form minimale  
+- Verifica con JSON provvisorio  
+- Script di controllo campi
+
+### ❗ Complicazioni
+- Alcuni stili non si applicano  
+- Navbar non stabile in responsive  
+- Layout generale ancora disordinato
+
+---
+
+## **02/12/2025 – Revisione Design & Refactoring**
+Giornata dedicata a sistemare tutto ciò che non funzionava graficamente.
+
+### Redesign
+- Scelta palette definitiva (blu/bianco/arancione)  
+- Navbar ridisegnata  
+- Footer più pulito  
+- Ridotti effetti inutili (ombre)
+
+### Ottimizzazioni JS
+- Separazione di `main.js` e `auth.js`  
+- Migliorati gli eventListener  
+- Rifatto il controllo della login
+
+### ❗ Complicazioni
+- Responsive ancora instabile  
+- Le card degli alloggi si sovrappongono  
+- A volte la validazione non parte
+
+---
+
+## **06/12/2025 – Rifiniture & Struttura Interna**
+Sto definendo sezioni più complesse.
+
+###  Nuove sezioni progettate
+- Pagina “Ricerca Atenei” (prototipo)  
+- Layout lista alloggi  
+- Idee per filtri (prezzo, distanza, posti)
+
+###  Migliorie grafiche
+- Icone rese uniformi  
+- Migliorato lo spacing generale  
+- Prima sistemazione della versione mobile
+
+### ❗ Complicazioni
+- CSS che confliggono tra le pagine  
+- Registrazione senza salvataggio (manca DB)  
+- Alcuni layout si rompono al click
+
+---
+
+## **10/12/2025 – Ritocchi Finali & Preparazione al Database**
+Il prototipo statico inizia ad avere senso.
+
+###  Sistemato oggi
+- Navbar finalmente responsive  
+- Modulo login migliorato  
+- Fixati tre bug CSS (margin fantasma incluso)
+
+###  Preparazione al DB
+Da salvare in futuro:
+- Utenti  
+- Atenei  
+- Abitazioni  
+- Occupanti  
+- Preferenze  
+- Recensioni
+
+Mi preparo al lavoro sullo schema ER.
+
+---
+
+#  **09/12/2024 – Progettazione Cartacea del Database (Schema ER)**
+
+Oggi ho iniziato la progettazione **cartacea** del database utilizzando lo schema ER.
+
+### Requisiti individuati
+1. **Utenti**
+   - dati personali  
+   - credenziali  
+   - preferenze
+
+2. **Atenei**
+   - nome  
+   - posizione  
+   - contatti  
+   - descrizione
+
+3. **Alloggi**
+   - prezzo  
+   - indirizzo  
+   - distanza  
+   - capacità posti  
+   - disponibilità
+
+4. **Match**
+   - associazione utenti–abitazioni  
+   - ruoli (proprietario/ospite)
+
+5. **Messaggio**
+   - voto  
+   - testo  
+   - autore  
+   - abitazione recensita
+
+### Note
+- Molte relazioni N–N  
+- Necessarie tabelle ponte  
+- Struttura pensata per essere scalabile
+
+
+#  **14/12/2025**
+***Fine dello schema ER***
+
+oggi mi sono messo sotto per concludere il progetto dello schema ER, con consegna prevista per domani Lundei 15, in breve ho fatto praticamente tutto il lavoro su carta (Tranne Conclusioni perche son troppe e non voglio scriverle a mano), per qeusto penso che faro un foglio doc e lo stamperò.
+
+lo schema tutto sommato mi soddifa, soddisfa i requisiti che mi sono posto e ho scritto nella "consegna".
+
+tutto sommato appunto sono contento e penso sia piu che sufficente come elaborato.
+
+
+### ❗ Complicazioni
+   
+   stranamente non ne ho trovati, semplici dubbi su coem andavano fatte le cose ma risolti dando uno sguardo alle dispense.
+
+#  **19/12/2025**
+
+   Oggi in classe abbiamo appreso il funzionamento di XAMPP, abbiamo creato le prime table con condice sql 
+
+      https://www.w3schools.com/sql/default.asp
+   
+   Dopo aver creato la tabella utente con i suoi attribut
+
+      1	id_utente Primaria	int(20)		UNSIGNED	No	Nessuno		AUTO_INCREMENT	Modifica Modifica	Elimina Elimina	
+      2	nome	varchar(100)	utf8mb4_general_ci		No	Nessuno			Modifica Modifica	Elimina Elimina	
+      3	cognome	varchar(100)	utf8mb4_general_ci		No	Nessuno			Modifica Modifica	Elimina Elimina	
+      4	immagine_profilo	varbinary(255)			Sì	NULL			Modifica Modifica	Elimina Elimina	
+      5	imamgine_profilo_Data	varbinary(255)			Sì	NULL			Modifica Modifica	Elimina Elimina	
+      6	indirizzo1	varchar(255)	utf8mb4_general_ci		Sì	NULL			Modifica Modifica	Elimina Elimina	
+      7	indirizzo2	varchar(255)	utf8mb4_general_ci		Sì	NULL			Modifica Modifica	Elimina Elimina	
+      8	citta	varchar(100)	utf8mb4_general_ci		Sì	NULL			Modifica Modifica	Elimina Elimina	
+      9	stato	varchar(100)	utf8mb4_general_ci		Sì	NULL			Modifica Modifica	Elimina Elimina	
+      10	codice_postale	varchar(20)	utf8mb4_general_ci		Sì	NULL			Modifica Modifica	Elimina Elimina	
+      11	provincia	varchar(100)	utf8mb4_general_ci		Sì	NULL			Modifica Modifica	Elimina Elimina	
+      12	numero_di_telefono	text	utf8mb4_general_ci		Sì	NULL			Modifica Modifica	Elimina Elimina	
+      13	email Indice	varchar(255)	utf8mb4_general_ci		No	Nessuno			Modifica Modifica	Elimina Elimina	
+      14	psw Indice	varchar(255)	utf8mb4_general_ci		No	Nessuno			Modifica Modifica	Elimina Elimina	
+      15	ateneoDiRiferenza	varchar(255)	utf8mb4_general_ci		Sì	NULL			Modifica Modifica	Elimina Elimina	
+      16	is_active	tinyint(1)			No	1			Modifica Modifica	Elimina Elimina	
+
+
+Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturando le cartelle e creando le body/Apps/ dove come prima app abbiamo "Atenei"

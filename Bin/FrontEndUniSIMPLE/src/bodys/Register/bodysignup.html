@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign In - UniTogether</title>
+    <link rel="stylesheet" href="../../style/static.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrap">
+        <a class="logo" href="../../index.html">
+          <img class="logo-img" src="../../public/o-removebg-preview.png" alt="logo">
+          <span><strong>Uni</strong>Together!</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="wrap">
+        <div class="form-card">
+          <h1 style="font-family:serif;margin:0 0 8px 0">Registrati</h1>
+          <p style="margin:0 0 18px 0;color:#666">Inizia ora con il tuo account UniTogether</p>
+          <hr>
+          <form id="signup-form" action="#" method="post" novalidate>
+
+            <div class="profile-photo">
+              <div class="avatar-wrap" title="Clicca per cambiare foto">
+                <img id="photo-preview" class="avatar" src="../public/alone.svg" alt="Anteprima foto profilo">
+                <div class="avatar-overlay">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5V19" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12H19" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="overlay-text">Cambia foto</span>
+                </div>
+                <button type="button" id="photo_remove" class="remove-btn" aria-label="Rimuovi foto" style="display:none">×</button>
+              </div>
+              <div class="photo-actions">
+                <input id="photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" style="display:none">
+                <div class="hint" style="font-size:12px;color:#666;margin-top:6px"></div>
+                <div class="error" id="err_photo" style="color:#b00020;font-size:13px;display:none;margin-top:6px"></div>
+              </div>
+            </div>
+
+            <div class="name-row">
+              <div class="field">
+                <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Nome</label>
+                <input id="nome" type="text" name="nome" placeholder="Nome" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+              </div>
+              <div class="field">
+                <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Cognome</label>
+                <input id="cognome" type="text" name="cognome" placeholder="Cognome" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+              </div>
+            </div>
+            <div class="error" id="err_nomecogn" style="color:#b00020;font-size:13px;display:none;margin-bottom:8px"></div>
+            
+            <div class="two-col-row">
+              <div class="field" style="flex:0 0 220px">
+                <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Telefono (con prefisso, es. +39)</label>
+                <input id="telefono" class="small" type="tel" name="telefono" placeholder="+39 3331234567" required style="padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+              </div>
+              <div class="field">
+               
+              </div>
+            </div>
+            <div class="error" id="err_telefono" style="color:#b00020;font-size:13px;display:none;margin-bottom:8px"></div>
+            <div class="error" id="err_email" style="color:#b00020;font-size:13px;display:none;margin-bottom:8px"></div>
+
+            <div class="two-col-row">
+              <div class="field">
+                <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Luogo di nascita</label>
+                <input id="luogo_nascita" type="text" name="luogo_nascita" placeholder="Città di nascita" required style="padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+              </div>
+              <div class="field" style="flex:0 0 180px">
+                <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Data di nascita</label>
+                <input id="data_nascita" type="date" name="data_nascita" required style="padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+              </div>
+            </div>
+            <div class="error" id="err_nascita" style="color:#b00020;font-size:13px;display:none;margin-bottom:8px"></div>
+            <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Codice fiscale</label>
+            <input id="codice_fiscale" type="text" name="codice_fiscale" placeholder="Inserisci codice fiscale" required style="width:100%;text-transform:uppercase;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+            <div class="error" id="err_cf" style="color:#b00020;font-size:13px;display:none;margin-bottom:8px"></div>
+            
+            
+            <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Email</label>
+            <input id="email" type="email" name="email" placeholder="tua.email@universita.it" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+           
+            <div class="error" id="err_email" style="color:#b00020;font-size:13px;display:none;margin-bottom:8px"></div>
+            <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Password</label>
+            <input id="password" type="password" name="password" placeholder="La tua password" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+
+            <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Ripeti Password</label>
+            <input id="confirm_password" type="password" name="confirm_password" placeholder="Ripeti la tua password" required style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+
+            <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Indirizzo</label>
+            <div class="two-col-row">
+              <div class="field">
+                <input id="via" type="text" name="via" placeholder="Via / Piazza" required style="padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+              </div>
+              <div class="field" style="flex:0 0 110px">
+                <input id="numero_civico" type="text" name="numero_civico" placeholder="N." required style="padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+              </div>
+            </div>
+            <div class="two-col-row">
+              <div class="field">
+                <input id="citta" type="text" name="citta" placeholder="Città" required style="padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+              </div>
+              <div class="field" style="flex:0 0 110px">
+                <input id="cap" type="text" name="cap" placeholder="CAP" required style="padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+              </div>
+            </div>
+            <div class="error" id="err_indirizzo" style="color:#b00020;font-size:13px;display:none;margin-bottom:8px"></div>
+
+            <div style="margin-bottom:12px">
+              <label style="display:block;font-size:13px;color:#444;margin-bottom:6px;" title="Definisci il ruolo all'interno della applicazione ">Sei:</label>
+              <label style="margin-right:12px"><input type="radio" name="ruolo" value="studente" checked> Studente</label>
+              <label style="margin-right:12px"><input type="radio" name="ruolo" value="ex-studente"> Ex-studente</label>
+              <label><input type="radio" name="ruolo" value="proprietario"> Proprietario</label>
+            </div>
+
+            <div id="cond_studente" style="margin-bottom:12px">
+              <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Ateneo di riferimento</label>
+              <input id="ateneo" type="text" name="ateneo" placeholder="Nome ateneo" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;margin-bottom:8px">
+            </div>
+
+            <div id="cond_ex" style="display:none;margin-bottom:12px">
+              <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Anno di laurea</label>
+              <input id="anno_laurea" type="number" name="anno_laurea" min="1950" max="2025" placeholder="YYYY" style="width:120px;padding:10px;border:1px solid #ddd;border-radius:8px">
+            </div>
+
+            <div id="cond_pro" style="display:none;margin-bottom:12px">
+              <label style="display:block;font-size:13px;color:#444;margin-bottom:6px">Liberatoria (obbligatoria)</label>
+              <label><input id="liberatoria" type="checkbox" name="liberatoria"> Accetto e firmo la liberatoria</label>
+              <div class="error" id="err_liberatoria" style="color:#b00020;font-size:13px;display:none;margin-top:6px"></div>
+            </div>
+
+            <button type="submit" style="width:100%;background:#111;color:#fff;padding:10px;border-radius:8px;border:none;font-weight:600">Registrati</button>
+          </form>
+
+          <p style="text-align:center;margin-top:12px;color:#666;font-size:14px">Hai già un account? <a href="./bodysignin.htmlF">Accedi qui</a></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="col">
+          <p style="color:#fff">© 2025 UniTogether</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function(){
+        const form = document.getElementById('signup-form');
+        if(!form) return;
+
+        const ruoloRadios = Array.from(document.querySelectorAll('input[name="ruolo"]'));
+        const condStud = document.getElementById('cond_studente');
+        const condEx = document.getElementById('cond_ex');
+        const condPro = document.getElementById('cond_pro');
+
+        function updateRoleFields(){
+          const ruolo = document.querySelector('input[name="ruolo"]:checked').value;
+          condStud.style.display = ruolo === 'studente' ? 'block' : 'none';
+          condEx.style.display = ruolo === 'ex-studente' ? 'block' : 'none';
+          condPro.style.display = ruolo === 'proprietario' ? 'block' : 'none';
+        }
+
+        ruoloRadios.forEach(r => r.addEventListener('change', updateRoleFields));
+        updateRoleFields();
+
+        // Photo upload preview and validation (modern avatar UI)
+        const photoInput = document.getElementById('photo');
+        const photoPreview = document.getElementById('photo-preview');
+        const avatarWrap = document.querySelector('.avatar-wrap');
+        const removeBtn = document.getElementById('photo_remove');
+        const MAX_PHOTO_SIZE = 2 * 1024 * 1024; // 2MB
+        const ALLOWED_TYPES = ['image/jpeg','image/png','image/webp'];
+
+        if(avatarWrap && photoInput){
+          avatarWrap.addEventListener('click', ()=> photoInput.click());
+        }
+
+        if(photoInput){
+          photoInput.addEventListener('change', function(){
+            clearError('err_photo');
+            const file = this.files && this.files[0];
+            if(!file) return;
+            if(!ALLOWED_TYPES.includes(file.type)){
+              showError('err_photo','Formato non supportato (usa JPG/PNG/WEBP)');
+              this.value = '';
+              return;
+            }
+            if(file.size > MAX_PHOTO_SIZE){
+              showError('err_photo','File troppo grande (max 2MB)');
+              this.value = '';
+              return;
+            }
+            const url = URL.createObjectURL(file);
+            if(photoPreview) photoPreview.src = url;
+            if(removeBtn) removeBtn.style.display = 'block';
+          });
+        }
+
+        if(removeBtn){
+          removeBtn.addEventListener('click', function(e){
+            e.stopPropagation();
+            if(photoInput) photoInput.value = '';
+            if(photoPreview) photoPreview.src = '../public/alone.svg';
+            this.style.display = 'none';
+            clearError('err_photo');
+          });
+        }
+
+        function showError(id, msg){
+          const el = document.getElementById(id);
+          if(!el) return;
+          el.textContent = msg;
+          el.style.display = 'block';
+        }
+        function clearError(id){
+          const el = document.getElementById(id);
+          if(!el) return;
+          el.textContent = '';
+          el.style.display = 'none';
+        }
+
+        function validateCF(cf){
+          if(!cf) return false;
+          const s = cf.toUpperCase().replace(/\s+/g,'');
+          const re = /^[A-Z]{6}[0-9]{2}[A-EHLMPR-T][0-9]{2}[A-Z][0-9]{3}[A-Z]$/i;
+          return re.test(s);
+        }
+
+        function validatePhone(ph){
+          if(!ph) return false;
+          const s = ph.replace(/\s+/g,'');
+          return /^\+\d{6,15}$/.test(s);
+        } 
+
+        function validateCAP(cap){
+          return /^\d{5}$/.test(cap);
+        }
+
+        function validateEmail(email){
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        form.addEventListener('submit', function(e){
+            ['err_email','err_telefono','err_cf','err_indirizzo','err_liberatoria','err_photo','err_nomecogn','err_nascita'].forEach(clearError);
+
+          let invalid = false;
+
+          const email = document.getElementById('email').value.trim();
+          const telefono = document.getElementById('telefono').value.trim();
+          const cf = document.getElementById('codice_fiscale').value.trim();
+          const password = document.getElementById('password').value;
+          const confirm = document.getElementById('confirm_password').value;
+          const via = document.getElementById('via').value.trim();
+          const numero = document.getElementById('numero_civico').value.trim();
+          const citta = document.getElementById('citta').value.trim();
+          const cap = document.getElementById('cap').value.trim();
+          const ruolo = document.querySelector('input[name="ruolo"]:checked').value;
+
+          if(!validateEmail(email)){
+            showError('err_email','Email non valida'); invalid = true;
+          }
+
+          if(!validatePhone(telefono)){
+            showError('err_telefono','Inserisci numero con prefisso, es. +39 3331234567'); invalid = true;
+          }
+
+          if(!validateCF(cf)){
+            showError('err_cf','Codice fiscale non valido (controlla formato)'); invalid = true;
+          }
+
+          if(password.length < 8){
+            alert('La password deve essere lunga almeno 8 caratteri'); invalid = true;
+          }
+          if(password !== confirm){
+            alert('Le password non coincidono'); invalid = true;
+          }
+
+          if(!via || !numero || !citta || !validateCAP(cap)){
+            showError('err_indirizzo','Indirizzo incompleto o CAP non valido (5 cifre)'); invalid = true;
+          }
+
+          // conditional
+          if(ruolo === 'studente'){
+            const ateneo = document.getElementById('ateneo').value.trim();
+            if(!ateneo){
+              alert('Inserisci l\'ateneo di riferimento'); invalid = true;
+            }
+          }
+          if(ruolo === 'ex-studente'){
+            const anno = document.getElementById('anno_laurea').value;
+            const y = parseInt(anno,10);
+            const now = new Date().getFullYear();
+            if(!anno || isNaN(y) || y < 1950 || y > now){
+              alert('Inserisci un anno di laurea valido'); invalid = true;
+            }
+          }
+          if(ruolo === 'proprietario'){
+            const ok = document.getElementById('liberatoria').checked;
+            if(!ok){
+              showError('err_liberatoria','La liberatoria è obbligatoria per i proprietari'); invalid = true;
+            }
+          }
+
+          if(invalid){ e.preventDefault(); /* keep user on form */ }
+        });
+      })();
+    </script>
+  </body>
+</html>
