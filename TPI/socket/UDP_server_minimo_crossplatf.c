@@ -38,8 +38,41 @@ void cleanup_socket(int sockfd)
 #define cleanup_socket(sockfd) close(sockfd) // Cleanup for Unix
 #endif
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int main()
 {
+
+                                                                              //PREPARAZIONE
+
+
+
+
+
+
   int sockfd;                           // il file descriptor (da cui fd) del socket
   char buffer[BUFFER_SIZE];             // un array di caratteri dove i dati oggetto della comunicazione verranno memorizzati
   struct sockaddr_in servaddr, cliaddr; // bisogna anche riservare dentro al programma
@@ -72,6 +105,23 @@ int main()
 
   // fine della preparazione
   // ora si comunica. riceviamo con la primitiva recvfrom
+
+
+
+
+
+
+
+                                                                          //Ascolto e lettura!
+
+
+
+
+
+
+
+
+
   while (1)
   {
     int r = ((double)rand() / RAND_MAX) * 100;
