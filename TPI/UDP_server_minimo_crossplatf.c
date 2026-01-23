@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 // questa sezione ifdef e la seguente sono necessarie per trattare diversamente, ove necessario, i socket tra windows e linux
 #ifdef _WIN32 // qui perché windows usa nomi diversi per le biblioteche che implementano i socket
 #include <winsock2.h>
@@ -19,6 +20,9 @@
 
 #define PORT 7890 // bada che porta TCP e UDP sono spazi separati, posso avere un server tcp e udp su stesso numero di porta
 #define BUFFER_SIZE 1024
+#define MESSAGE "Buongiorno, indovina il numero!"
+
+
 
 // e qui perché windows vuole una inizializzazione e una pulizia finale dei socket che linux non richiede (e alle chiamate faccio rispondere funzioni vuote)
 #ifdef _WIN32
@@ -124,8 +128,13 @@ int main()
 
   while (1)
   {
-    int r = ((double)rand() / RAND_MAX) * 100;
-    printf("Buongiorno indovina il numero!");
+    int r = rand()%100 + 1;
+    sendto(sockfd, (const char *)MESSAGE, strlen(MESSAGE), 
+       0, (const struct sockaddr *) &cliaddr, 
+       sizeof(cliaddr));
+    printf("Message sent to the client.\n");
+
+    
     ssize_t n = recvfrom( // la recvfrom ritorna il numero di byte effettivamente letti dal socket. ssize_t di fatto è un tipo intero, tanto che dopo lo casto a int per print-arlo
         sockfd,
         buffer,
