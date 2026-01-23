@@ -407,5 +407,18 @@ Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturand
 
 
    Abbiamo fatto una revisione generica del form in html aggiungendo il metodo action="" dove va messo il file php e il metodo method="" dove va messo il metodo d'invio dei paramentri,
+
+
+   oltre alle variabili per la conessione, ora nel file php dobbiamo creare  le variabili che prendiamo dal html
+
+      VARIABILI SUPER GLOBALI
+      $nome=$_POST["nome"];
+      .
+      .
+      
+   all'interno "paramentro" di $_POST[] va messo il nome ="", che abbiamo dato al tag input sul file html.
+
+
+   le varbiali all'interno del $sql = ""... vanno messe le variabili tra apici '' se sono stringe e senza se sono interi.
    ### ❗ Complicazioni
 
