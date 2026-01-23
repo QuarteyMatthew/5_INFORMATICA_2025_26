@@ -328,4 +328,78 @@ tutto sommato appunto sono contento e penso sia piu che sufficente come elaborat
       16	is_active	tinyint(1)			No	1			Modifica Modifica	Elimina Elimina	
 
 
-Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturando le cartelle e creando le body/Apps/ dove come prima app abbiamo "Atenei"
+Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturando le cartelle e creando le body/Apps/ dove come prima app abbiamo "Atenei".
+
+### ❗ Complicazioni
+   
+  Nessuna
+#  **14/01/2026**
+
+## RIPASSO
+
+   la prof ha dato due esercizzi sullo schema logico relazionale dove data una consegna dovevamo realizzare lo schema ER, ristrutturarlo e fare lo schema logico relazzionale. 
+   Gli essercizi erano uno slla gestione di una Università , il secondo esercizio riguardava la gestioen di una base spazziale.
+
+### ❗ Complicazioni
+
+   Nessuna complicazione Trovata
+
+
+#  **14/01/2026**
+
+## RIPASSO FOTO
+
+
+#  **23/01/2026**
+
+## SQL
+
+   oggi abbiamo visto il funzionamento di sql traminte XAMP lite, abbiamo creato un database con 
+
+      create databease [nome database];
+
+   poi abbiamo creato la prima table
+
+      create table( [qui vanno messi i vari attributi]);
+
+   poi abbiamo inserito le tuple:
+
+      insert into [nome table](attributi) valeus (valori);
+
+   Abbiamo continuato conoscendo il linguaggio PHP su w3school
+
+   abbiamo scoperto che per collegarsi al server servono 4 variabili
+
+      $servername  = il nome del server
+      $username = username utente
+      $password = password utente 
+      $dbname = nome del database
+   
+   poi si crea un ogetto conessione
+
+      $conn =  new mysqli($servername, $username, $password, $dbname);
+      
+   il controllo avviene cosi 
+   
+      if($conn->connect_error){
+         die("Connection falied: " . $conn ->connect_error)
+      }
+
+      -> "." concatena
+
+   Ora per scrivere dentro una table facilissimo facciomo 
+
+      $sql = "insert into "nome table" (attributi) valeus (valori);"
+
+   Qui ce un controllo:
+
+      if($conn -> query($sql) === TRUE){
+         echo "Tutto creato bene";
+      }else
+        
+      -> echo"errore";
+
+
+   il file  .php finale, va messo dentro alla cartella www
+### ❗ Complicazioni
+
