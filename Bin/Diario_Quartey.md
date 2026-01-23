@@ -396,10 +396,16 @@ Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturand
       if($conn -> query($sql) === TRUE){
          echo "Tutto creato bene";
       }else
-        
-      -> echo"errore";
+        echo"errore";
 
 
    il file  .php finale, va messo dentro alla cartella www
-### ❗ Complicazioni
+
+
+   fatto cioò bisogna runnare localhos 127.0.0.1
+   
+
+
+   Abbiamo fatto una revisione generica del form in html aggiungendo il metodo action="" dove va messo il file php e il metodo method="" dove va messo il metodo d'invio dei paramentri,
+   ### ❗ Complicazioni
 
