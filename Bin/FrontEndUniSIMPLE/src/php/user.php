@@ -24,7 +24,7 @@ if ($conn->connect_error) {
     die("Connection falied: " . $conn->connect_error);
 }
 
-$sql = "insert into utenti (nome, cognome, telefono, luogo_nascita, DATA_NASCITA, codice_fiscale, email, pass, via, cap, citta, Numero_civico, ateneo_riferimento) VALUES ('$nome', '$cognome', '$telefono', '$luogo_nascita', '$data_nascita', '$codice_fiscale', '$email', '$pass', '$via', '$cap', '$citta', '$numero_civico', '$ateneo');";
+$sql = "insert into utenti (nome, cognome, telefono, luogo_nascita, DATA_NASCITA, codice_fiscale, email, pass, via, cap, citta, Numero_civico, ateneo_riferimento) VALUES ('$nome', '$cognome', $telefono, '$luogo_nascita', '$data_nascita', '$codice_fiscale', '$email', '$pass', '$via', '$cap', '$citta', '$numero_civico', '$ateneo');";
 
 if ($conn->query($sql) === TRUE) {
     echo "Tutto creato bene";
