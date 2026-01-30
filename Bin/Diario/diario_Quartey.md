@@ -376,28 +376,30 @@ Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturand
       $dbname = nome del database
    
    poi si crea un ogetto conessione
-
+   ```php
       $conn =  new mysqli($servername, $username, $password, $dbname);
-      
+   ```
    il controllo avviene cosi 
    
+   ```php
       if($conn->connect_error){
          die("Connection falied: " . $conn ->connect_error)
       }
 
       -> "." concatena
-
+   ```
    Ora per scrivere dentro una table facilissimo facciomo 
 
+   ```php
       $sql = "insert into "nome table" (attributi) valeus (valori);"
-
+   ```
    Qui ce un controllo:
-
+   ```php
       if($conn -> query($sql) === TRUE){
          echo "Tutto creato bene";
       }else
         echo"errore";
-
+   ```
 
    il file  .php finale, va messo dentro alla cartella www
 
@@ -411,10 +413,12 @@ Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturand
 
    oltre alle variabili per la conessione, ora nel file php dobbiamo creare  le variabili che prendiamo dal html
 
+   ```php
       VARIABILI SUPER GLOBALI
       $nome=$_POST["nome"];
       .
       .
+   ```
       
    all'interno "paramentro" di $_POST[] va messo il nome ="", che abbiamo dato al tag input sul file html.
 
@@ -429,5 +433,45 @@ Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturand
 
 ## ESERCIZIO SQL
    
+   dato l'esercizio ho creto le table su phpmyadmin
 
+   ```sql
+      Create DATABASE negozio;
+      create table categorie(
+         id_categoria int AUTO_INCREMENT PRIMARY KEY,
+         nome varchar(128) NOT null
+      );
+      CREATE table prodotti(
+         id_prodotto int AUTO_INCREMENT PRIMARY KEY,
+         nome varchar(128) NOT NULL,
+         fornitore varchar(128) not null,
+         id_categorie int,
+         FOREIGN KEY (id_categorie) REFERENCES categorie(id_categoria),
+         prezzo float not null
+      );
+      create table clienti(
+         id_cliente int AUTO_INCREMENT PRIMARY KEY,
+         nome varchar(128) not null,
+         indirizzo varchar(256) not null,
+         citta varchar(256) not null,
+         nazione varchar(32) not null
+      );
+      create table ordine(
+         id_ordine int AUTO_INCREMENT PRIMARY KEY,
+         id_cliente int,
+         FOREIGN KEY (id_cliente) REFERENCES clienti(id_cliente),
+         data_ordine date not null
+      );
+      create table dettagli_ordini(
+         id_ordine int AUTO_INCREMENT,
+            id_prodotto int,
+            FOREIGN KEY (id_prodotto) REFERENCES prodotti(id_prodotto),
+            quantità int not null,
+            PRIMARY KEY (id_ordine, id_prodotto)
+      );
+   ```
+
+   ora dobbiamo popolare e lo facciamo tramite l'intelligenza artificiale e gli chiediaom di darci 100 popolazioni:
+
+   
 ### ❗ Complicazioni
