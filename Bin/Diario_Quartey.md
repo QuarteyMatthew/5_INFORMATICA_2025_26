@@ -422,3 +422,12 @@ Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturand
    le varbiali all'interno del $sql = ""... vanno messe le variabili tra apici '' se sono stringe e senza se sono interi.
    ### ❗ Complicazioni
 
+   nessuna dificolta riscontrata se non il vari type.
+
+
+#  **30/01/2026**
+
+## ESERCIZIO SQL
+   
+
+### ❗ Complicazioni
