@@ -473,5 +473,46 @@ Mi sono messo a implementare la pagina per gli atenei sul sito web ristrutturand
 
    ora dobbiamo popolare e lo facciamo tramite l'intelligenza artificiale e gli chiediaom di darci 100 popolazioni:
 
-   
+   a)
+
+```sql
+SELECT p.nome
+FROM prodotti p
+JOIN categorie c ON p.id_categorie = c.id_categoria
+WHERE c.nome = 'bevande';
+ 
+
+b)
+SELECT SUM p.prezzo
+FROM ordini o
+JOIN dettagli_ordini d ON o.id_ordine = d.id_ordine
+JOIN prodotti p ON d.id_prodotto = p.id_prodotto
+WHERE o.id_cliente = 2
+ORDER BY o.id_ordine DESC
+LIMIT 1;
+
+c)
+SELECT p.nome, s.nome, YEAR(p.data_nascita) AS anno
+FROM clienti p
+JOIN clienti s
+ON YEAR(p.data_nascita) = YEAR(s.data_nascita)
+AND p.id_cliente < s.id_cliente;
+
+d)
+SELECT p.nome, s.nome, p.citta AS città
+FROM clienti pJOIN clienti s
+  ON p.citta = s.citta
+ AND p.id_cliente < s.id_cliente;
+
+
+e) SELECT p.nome
+FROM prodotti p
+WHERE p.id_prodotto NOT IN (
+    SELECT d.id_prodotto
+    FROM dettagli_ordini d
+    JOIN ordini o ON d.id_ordine = o.id_ordine
+    JOIN clienti c ON o.id_cliente = c.id_cliente
+    WHERE c.citta IN ('Roma', 'Milano')
+);
+```
 ### ❗ Complicazioni
