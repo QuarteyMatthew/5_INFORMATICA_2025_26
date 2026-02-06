@@ -505,7 +505,7 @@ FROM clienti pJOIN clienti s
  AND p.id_cliente < s.id_cliente;
 
 
-e) SELECT p.nome
+e)SELECT p.nome
 FROM prodotti p
 WHERE p.id_prodotto NOT IN (
     SELECT d.id_prodotto
@@ -515,4 +515,13 @@ WHERE p.id_prodotto NOT IN (
     WHERE c.citta IN ('Roma', 'Milano')
 );
 ```
+### ❗ Complicazioni
+
+      nessuna complicazione trovata.
+
+
+#  **06/02/2026**
+
+## 
+
 ### ❗ Complicazioni
