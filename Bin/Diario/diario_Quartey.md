@@ -1,5 +1,5 @@
-# 📘 Diario di Bordo – Progetto **UniTogheter**
 ---
+# Diario di Bordo – Progetto **UniTogheter**
 # **Matthew Quartey**
 
 ## **UniTogether** 16/09/2025
@@ -522,6 +522,21 @@ WHERE p.id_prodotto NOT IN (
 
 #  **06/02/2026**
 
-## 
+##PHP
 
+oggi abbiamo fatto un gran passo in avanti, abbiamo visto online da w3school php, abbiamo visto al insert, e come va scritta e compilata correttamente.
+ci siamo soffertmatica in particolare sul PHP form:
+
+
+
+PHP Form Handling
+PHP Form Validation
+PHP Forms - Required Fields
+PHP Forms - Validate E-mail and URL
+PHP Complete Form Example
+
+al termine della presentazio la prof ci ha assegnato un compito.
+
+   
+require o include '', per inlcuder un file.
 ### ❗ Complicazioni
